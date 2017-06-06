@@ -1,0 +1,585 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>鼠绘模</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/idangerous.swiper.css">
+	<script src="./js/idangerous.swiper.min.js"></script>
+	<script src="./js/tab-switch.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+		  var mySwiper = new Swiper('.swiper-container',{
+		    loop: true
+		    //其他设置
+		  });  
+		  	var nav = document.getElementById("nav-left");
+			var nav_list = nav.getElementsByTagName("a");
+			var show = document.getElementsByClassName("main");
+			for(var i = 0;i<nav_list.length;i++){
+				(function(index){
+					nav_list[index].onclick=function(){
+						for(var j = 0;j<nav_list.length;j++){
+							show[j].className="hide main";
+						}
+						show[index].className="main";
+					}
+				})(i);
+					
+			}
+		}
+
+	</script>
+</head>
+<body id="app">
+	<!--顶部-->
+	<div id="header">
+		<div id="container" >
+			<div id="nav-left">
+				<a href="#" id="nav-left-logo"><img src="./pic/1764218f.logo.png" alt="" id="head-logo"></a>
+				<a href="####" class="nav-left-a">在线漫画</a>
+				<a href="####" class="nav-left-a">文章资讯</a>
+				<a href="####" class="nav-left-a">在线动画</a>				
+				<a href="####" class="nav-left-a">商品周边</a>
+				<a href="####" class="nav-left-a">关于我们</a>
+				<a href="####" class="nav-left-a">加入我们</a>
+			</div>
+			<div id="nav-right">
+				<a href="" class="nav-right-a">登录</a>
+				<a href="" class="nav-right-a">注册</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!--内容-->
+	<div class="main">
+		<div id="slide">
+			<div class="swiper-container" style="height:302px;padding: 20px 10px;">
+			  <div class="swiper-wrapper">
+			      <div class="swiper-slide" style="position: relative;">
+			      	<img src="./pic/myzD3_AVQmqlajdmu25ATvrS.jpg" alt="">
+			      	<a href="">真人电影【三月份的狮子】预定</a>
+			      </div>
+			      <div class="swiper-slide"> p2 </div>
+			      <div class="swiper-slide"> p3 </div>
+			  </div>
+			</div>
+		</div>
+		<!--订阅-->
+		<div class="grid index-box">	
+			<div class="grid-3">
+				<div class="grid-title">
+					<h2><a href="#">我的订阅</a></h2>
+					<a href="#">更多订阅</a>
+				</div>
+				<div class ="grid-login">
+					马上<a href="" class="log-btn">登陆</a>或<a href=""class="reg-btn">注册</a>开始订阅
+				</div>
+			</div>
+			<div class="grid-1"></div>
+		</div>
+		<!--在线漫画-->
+		<div class="grid index-box">
+			<div class="grid-3">
+				<div class="grid-title">
+					<h2><a href="">在线漫画</a></h2>
+					<a href="">鼠绘汉化</a>
+					<a href="">热血漫画</a>
+					<a href="">国产漫画</a>
+				</div>
+				<div id="grid-cartoon">
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="javascript:;" class="title">海贼王</a>
+						<a href="#" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+				</div>
+			</div>
+			<div class="grid-1">
+				<div class="grid-title">
+				<h2><a href="">即将更新</a></h2>
+				</div>
+				<div id="cartoon-update">
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--文章资讯-->
+		<div class="grid index-box">
+			<div class ="grid-3">
+				<div class="grid-title">
+					<h2><a href="">文章资讯</a></h2>
+					<a href="">鼠绘专栏</a>
+					<a href="">漫画分析</a>
+					<a href="">新闻资讯</a>
+					<a href="">CosPlay</a>
+					<a href="">手办周边</a>
+					<a href="">视频短片</a>
+					<a href="">资源下载</a>
+					<a href="">美图鉴赏</a>
+				</div>
+				<div id ="grid-artical">
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+					<div class="grid-article-list">
+						<img src="./pic/articlehaizei.jpg" alt="" class="article-img">
+						<a href="" class="category">『鼠绘专栏』</a>
+						<a href="" class="title">为什么漫画不更新？什么是合刊？它和休刊有什么不同？</a>
+						<p class="s-time">2016-12-15</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid-1">
+				<div class="grid-title">
+					<h2><a href="">鼠绘专栏</a></h2>
+				</div>
+				<div id="article-list-text">
+					<a href="" class="article-title article-text-a" >1 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >2 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >3 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >4 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >5 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >6 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+					<a href="" class="article-title article-text-a" >7 真人电影「3月的狮子」先行预告公开 <span class="time">12-15</span></a>
+				</div>
+			</div>
+		</div>
+		<!--商品周边-->
+		<div class="grid index-box">
+			<div class="grid-3">
+				<div class="grid-title">
+					<h2><a href="">商品周边</a></h2>
+					<a href="">手办</a>
+					<a href="">服饰</a>
+					<a href="">杯子</a>
+					<a href="">鼠标垫</a>
+					<a href="">摆件</a>
+					<a href="">挂链</a>
+					<a href="">图书</a>
+					<a href="">其他</a>
+				</div>
+				<div id="grid-good">
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+					<div class="good-list">
+						<img src="./pic/goodfrank.jpg" alt="" class="good-img">
+						<a href="" class="good-title">组立式景品 15周年特别版 弗兰奇15周年特别版 弗兰奇15周年特别版 弗兰奇15周年特别版 弗兰奇15周年特别版 弗兰奇</a>
+						<a href="" class="price">￥ 120.00</a>
+					</div>
+				</div>
+			</div>
+			<div class="grid-1">
+				<div class="grid-title">
+					<h2><a href="">手办推荐</a></h2>
+				</div>
+				<div id="good-list-text">
+					<a href="" class="article-title" >1 独家制作 海贼王 瓶中手办 <span class="price">￥ 1000.00</span></a>
+					<a href="" class="article-title" >2 独家制作 海贼王 瓶中手办 kan kan<span class="price">￥ 100.00</span></a>
+					<a href="" class="article-title" >3 独家制作 海贼王 瓶中手办 <span class="price">￥ 1000.00</span></a>
+					<a href="" class="article-title" >4 独家制作 海贼王 瓶中手办 <span class="price">￥ 1000.00</span></a>
+					<a href="" class="article-title" >5 独家制作 海贼王 瓶中手办 <span class="price">￥ 1000.00</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--在线漫画-->
+	<div class="hide main">
+		<div class="grid">
+			<div class="grid-3">
+				<div class="nav-cartoon">
+					<h3>漫画分类</h3>
+					<a href="">鼠绘汉化</a>
+					<a href="">热血漫画</a>
+					<a href="">国产漫画</a>
+				</div>
+				<div id="grid-cartoon">
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+					<div class="grid-cartoon-list">
+						<img src="./pic/haizei.jpg" alt="海贼王"class="cartoon-img">
+						<a href="" class="title">海贼王</a>
+						<a href="" class="cartoon-word">更新至：<strong> 800 </strong>话</a>
+						<small>镜之国的乔哥</small>
+					</div>
+				</div>
+				<div id="page">
+					<ul>
+						<li class="page-num"><a href="">上一页</a></li>
+						<li class="page-num"><a href="" class="page-active">1</a></li>
+						<li class="page-num"><a href="">2</a></li>
+						<li class="page-num"><a href="">3</a></li>
+						<li class="page-num"><a href="">4</a></li>
+						<li class="page-num"><a href="">5</a></li>
+						<li class="page-num"><a href="">下一页</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid-1">
+				<div id="cartoon-update">
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--文章资讯-->
+	<div class="hide main">
+		<div class="grid">
+			<div class="grid-3">
+				<div class="nav-article">
+					<h3>文章分类</h3>        
+					<a href="####">鼠绘专栏</a>
+					<a href="####">漫画分析</a>
+					<a href="####">新闻资讯</a>
+					<a href="####">CosPlay</a>
+					<a href="####">美文欣赏</a>
+					<a href="####">手办周边</a>
+					<a href="####">视频短片</a>
+					<a href="####">资源下载</a>
+					<a href="####">美图鉴赏</a>
+				</div>
+				<div class="article-list">
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+					<div class="article">
+						<div class="article-img">
+							<a href=""><img src="./pic/shouban.jpg" alt=""></a>
+							<a href="" class="category">『手办周边』</a>
+						</div>
+						<div class="article-info">
+							<h3><a href="">《火影忍者》鸣人佐助背靠背手办开放预售</a></h3>
+							<a href="" class="more">阅读全文></a>
+							<p class="time">2017-01-10 02:07:57</p>
+						</div>
+					</div>
+				</div>
+				<div id="page">
+					<ul>
+						<li class="page-num"><a href="">上一页</a></li>
+						<li class="page-num"><a href="" class="page-active">1</a></li>
+						<li class="page-num"><a href="">2</a></li>
+						<li class="page-num"><a href="">3</a></li>
+						<li class="page-num"><a href="">4</a></li>
+						<li class="page-num"><a href="">5</a></li>
+						<li class="page-num"><a href="">下一页</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid-1">
+				<div id="cartoon-update">
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+					<div class="carton-updata-li">
+						<img src="./pic/xiaoyaowei.gif" alt="">
+						<a href="" class="name">妖精的尾巴</a>
+						<p>515<small>话</small> <span class="update-t">12-19</span></p>
+					</div>
+				</div>
+			</div>
+		</div></div>
+	<div class="hide main">2</div>
+	<div class="hide main">3</div>
+	<div class="hide main">4</div>
+	<div class="hide main">5</div>
+	<!--底部-->
+	<div id="footer">
+		<div id="ft"></div>
+		<div id="copyright">
+			Copyright © 2016 <a href="">鼠绘漫画网</a>, All rights reserved。<br />
+			本站声明:网站部分内容来自网络,如有侵权请联系我们 <a href="">cup@ishuhui.com</a> ,我们将及时处理!
+		</div>
+	</div>
+</body>
+</html>
