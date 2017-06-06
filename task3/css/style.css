@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei","Helvetica Neue",Helvetica, Arial, sans-serif;
+}
+body {
+    color: #666;
+}
+ul {
+    list-style: none;
+}
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #999;
+    box-sizing: border-box;
+    background-color: #337AB7;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 60px;
+    padding-left: 20px;
+    color: #FFF;
+}
+
+/*弹出窗*/
+
+#category-pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background:  rgba(49,49,49,0.7);
+}
+
+.pop-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    margin-left: -175px;
+    margin-top: -150px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    z-index: 10;
+    background-color: #FFF;
+    padding: 20px;
+    font-size: 16px;
+    color: #000;
+}
+
+.pop-title {
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.pop-form {
+    margin-bottom: 40px;
+}
+
+.pop-form input {
+    width: 210px;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.pop-form .error,
+#task-details .error {
+    border: 1px solid #F00;
+}
+
+.pop-form .error::-webkit-input-placeholder,
+#task-details .error::-webkit-input-placeholder {
+         color: #F00;
+}
+
+.pop-form select {
+    width: 210px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    color: #666;
+    outline: none;
+}
+
+.pop-btnbar {
+    font-size: 0px;
+}
+
+.my-button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFF;
+    outline: none;
+    background: #40A5ED;
+    cursor:pointer;
+    transition: all .3s;
+    -webkit-transition: All 0.3s;
+    -moz-transition: All 0.3s;
+    -o-transition: All 0.3s;
+}
+
+
+.my-button:hover {
+    background-color: #4285B5;
+}
+
+.my-button:first-child {
+    margin-right: 10px;
+}
+
+.close-button {
+    background-color: #D9544F;
+}
+
+.close-button:hover {
+    background-color: #C12A25;
+} 
+
+/*最左侧 任务分类列表*/
+#task-category h2:hover,
+.category-list h3:hover,
+.item h4:hover,
+.status li:hover,
+.task-wrap .task-name:hover {
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #999;
+    box-sizing: border-box;
+}
+
+#task-category {
+    position: absolute;
+    top:60px;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    padding-top: 5px;
+    background-color: #F2F2F2;
+}
+
+.category-wrap{
+    overflow: auto;
+    height: 100%;
+}
+
+#task-category h2 {
+    font-size: 16px;
+    padding-left: 15px;
+    line-height: 30px;
+    cursor: pointer;
+
+}
+
+.category-list h3 {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.item h4 {
+    padding-left: 40px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.choose {
+    box-shadow: 1px 1px 1px #999;
+    border-radius: 4px;
+    background-color: #337AB7;
+    color: #FFF;
+}
+
+.delete {
+    display: none;
+    float: right;
+    padding-right: 10px;
+}
+.task-name .delete {
+
+}
+.category-list li h4:hover .delete,
+.category-list li h3:hover .delete,
+.task-name:hover .delete
+ {
+    display: inline;
+}
+
+.add {
+    position: absolute;
+    right: 15px;
+    bottom:20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #40A5ED;
+    cursor: pointer;
+    color: #0AE;
+    text-align: center;
+    transition: all .3s;
+    -webkit-transition: All 0.3s;
+    -moz-transition: All 0.3s;
+    -o-transition: All 0.3s;
+}
+.icon-pencil {
+    line-height: 40px;
+}
+.add:hover {
+    color: #FFF;
+    background-color: #40A5ED;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+.add:active {
+    right: 12px;
+    bottom: 16px;
+}
+/*中间列 任务列表*/
+#task-list {
+    position: absolute;
+    top:60px;
+    bottom: 0;
+    left: 245px;
+    width: 240px;
+    padding-top: 5px;
+    background-color: #F2F2F2;
+}
+.status {
+    padding-left: 15px;
+    border-bottom: 1px solid #CCC;
+}
+
+.status ul {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    list-style: none;
+}
+
+.status ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+.status li {
+    float: left;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.task-wrap {
+    overflow: auto;
+    position: absolute;
+    top: 36px;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.task-wrap > ul {
+    margin-bottom: 2px;
+}
+.task-wrap .time {
+    padding: 4px 20px;
+    box-shadow: 0px 1px 2px #999;
+    background-color: #E0E0E0;
+}
+
+.task-wrap .task-name {
+    padding: 4px 5px 4px 30px;
+    cursor: pointer;
+    z-index: 5;
+}
+.task-done {
+    color: #56D42F;
+}
+
+.task-wrap .icon-ok {
+    position: absolute;
+    left: 10px;
+}
+
+/*最右边 任务栏*/
+#task-details {
+    margin-left: 490px;
+    height: 600px;
+    background-color: #FAFAFA;
+}
+
+.task-infor {
+    height: 50px;
+    box-shadow: 0px 1px 2px #D2D2D2;
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+.task-infor input {
+    /*display: none;*/
+    width: 300px;
+    height: 28px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.edit-tag {
+    float: right;
+    margin-right: 15px;
+}
+.edit-tag i {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.task-contentwrap {
+    padding: 20px;
+}
+.task-contentwrap p {
+}
+
+.task-contentwrap textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.edit-btnbar {
+    margin-top: 20px;
+    float: right;
+}
+
+.edit-btnbar .edit-button {
+    width: 80px;
+}
+
+
+/*vue 动画*/
+.add-fade-enter-active,
+.add-fade-leave-active {
+  transition: all .5s
+}
+.add-fade-enter,
+.add-fade-leave-active {
+    opacity: 0;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}

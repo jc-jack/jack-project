@@ -1,0 +1,118 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "68e298ff2d8b25dd7f647ed64f5ae690",
+      "css": "emo-surprised",
+      "code": 59398,
+      "src": "fontelico"
+    },
+    {
+      "uid": "bb68a13a3574b087d4350eff0b8d48e3",
+      "css": "emo-tongue",
+      "code": 59399,
+      "src": "fontelico"
+    },
+    {
+      "uid": "12f4ece88e46abd864e40b35e05b11cd",
+      "css": "ok",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "b13a27d19dd739e29cbc7926085386d9",
+      "css": "folder",
+      "code": 59394,
+      "src": "iconic"
+    },
+    {
+      "uid": "7141927f949e757c7e218cf70d9dceb4",
+      "css": "doc",
+      "code": 61514,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "e160a7e42e4e818463fd5a8607b9f608",
+      "css": "down-circle",
+      "code": 59395,
+      "src": "websymbols"
+    },
+    {
+      "uid": "a7e3ce91275bb77c0f4ec44a548b325c",
+      "css": "up-circle",
+      "code": 59396,
+      "src": "websymbols"
+    },
+    {
+      "uid": "7b16b22168e762c88333f465da862098",
+      "css": "ok-1",
+      "code": 59397,
+      "src": "websymbols"
+    },
+    {
+      "uid": "d35a1d35efeb784d1dc9ac18b9b6c2b6",
+      "css": "pencil",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "41087bc74d4b20b55059c60a33bf4008",
+      "css": "edit",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c95735c17a10af81448c7fed98a04546",
+      "css": "folder-open",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2b6bf06e87a223ccd1ddc1874932ca86",
+      "css": "th-thumb",
+      "code": 61450,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "lu2wqmd7v9zp21knhy4eifo41wjp4cnx",
+      "css": "th-list",
+      "code": 59403,
+      "src": "typicons"
+    },
+    {
+      "uid": "d7b214265bfe7138768bb8b9f62b759a",
+      "css": "certificate-outline",
+      "code": 59404,
+      "src": "typicons"
+    },
+    {
+      "uid": "1a7ed99931fee554309101d072e5363d",
+      "css": "certificate",
+      "code": 59405,
+      "src": "typicons"
+    },
+    {
+      "uid": "83e7b366e9b39bc4006b821f7c5efa4d",
+      "css": "folder-1",
+      "code": 59406,
+      "src": "typicons"
+    },
+    {
+      "uid": "13ea1e82d38c7ed614d9ee85e9c42053",
+      "css": "folder-empty",
+      "code": 59407,
+      "src": "iconic"
+    }
+  ]
+}

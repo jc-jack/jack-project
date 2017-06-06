@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>task0002_3</title>
+    <link rel="shortcut icon"  href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <div class="head-logo"><a href="####"><h1>Jack's test</h1></a></div>
+            <nav class="head-nav">
+            <ul>
+                <li><a href="task0002_1.html">练习1</a></li>
+                <li><a href="task0002_2.html">练习2</a></li>
+                <li><a href="task0002_3.html">练习3</a></li>
+                <li><a href="task0002_4.html">练习4</a></li>
+                <li><a href="task0002_5.html">练习5</a></li>
+            </ul>
+            </nav>
+        </div>
+        <a class="icon" href="www.github.com"><img src="img/icon-github.png" alt="nav"></a>
+    </header>
+    <div id="main">
+        <h2>练习3 <span>图片轮换</span></h2>
+        <div id="container">
+            <div id="pic-list" style="left: -600px;">
+                <img src="img/slide-5.jpg" alt="图5">
+                <img src="img/slide-1.jpg" alt="图1">
+                <img src="img/slide-2.jpg" alt="图2">
+                <img src="img/slide-3.jpg" alt="图3">
+                <img src="img/slide-4.jpg" alt="图4">
+                <img src="img/slide-5.jpg" alt="图5">
+                <img src="img/slide-1.jpg" alt="图1">
+            </div>
+            <ul class="button">
+                <li index="1" class="on"></li>
+                <li index="2"></li>
+                <li index="3"></li>
+                <li index="4"></li>
+                <li index="5"></li>
+            </ul>
+            <a href="javascript:void(0);" id="prev" class="arrow">&lt;</a>
+            <a href="javascript:void(0);" id="next" class="arrow">&gt;</a>
+        </div>
+        <div id="ctr-slide">
+            <button id="forward">正向轮播</button>
+            <button id="reverse">反向轮播</button>
+            <button id="stop">停止轮播</button>
+        </div>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/task0002-3.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+<head>
+    <meta charset="UTF-8">
+    <title>个人任务管理系统</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../date/jquery-ui.min.css">
+    <!--[if lt IE 7]>
+    <style>
+        .ficon{font-family:'fontello'}
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="title">GDT Tools</div>
+    </header>
+    <div id="main">
+        <!-- 左侧分类列表 -->
+        <div id="task-category">
+            <div class="category-wrap">
+                <h2 id="all-task" @click="choAll" :class="{choose: allTask.chosen}"><i class="icon-th-list"></i>所有任务 ({{showAllTaskNum()}})</h2>
+                <ul class="category-list">
+                    <li v-for="(category, index) in projectList">
+                        <h3 @click="choCat(index)" :class="{choose: category.chosen}">
+                            <i class="icon-folder-1" ></i>
+                            <span>{{category.name}} ({{showTaskNum(index)}}) </span>
+                            <i v-if="index>0" class="icon-cancel delete" @click.stop="delCat(index)"></i>
+                        </h3>
+                         <ul>
+                            <li  v-for=" (catChild, childIndex) in category.children" :class="['item', {choose: catChild.chosen}]">
+                                <h4 @click="choSubCat(childIndex, index)" >
+                                    <i class="icon-doc"></i>
+                                    <span>{{catChild.name}} ({{catChild.tasks.length}}) </span>
+                                    <!-- 删除按钮 -->
+                                    <i v-if="index>0" class=" icon-cancel delete" @click.stop="delChild(childIndex, index)" ></i>
+                                </h4>
+                            </li>
+                        </ul> 
+                    </li>
+                </ul>
+            </div>
+            <div class="add" @click="pop"><i class="icon-pencil"></i></div>
+        </div>
+        
+        <!-- 中间栏 任务列表 -->
+        <div id="task-list">
+            <div class="status">
+                <ul>
+                    <li v-for="(statu, staIndex) in taskData.taskStatus" :class="{choose: statu.chosen}" @click="choSta(staIndex)"><i :class="statu.tag"></i>{{statu.content}}</li>
+                </ul>
+            </div>
+            <div class="task-wrap">
+                <ul v-for="(taskList, catIndex) in catTasksByDate">
+                    <li class="time" v-if="isDateShow(taskList.tasks)">{{taskList.date}}</li>
+                    <li v-for="(taskItem, taskIndex) in taskList.tasks" v-if="taskItem.isShow" @click="choTask(catIndex, taskIndex)" :class="['task-name',{'task-done': taskItem.isDone,'choose': taskItem.chosen}]">
+                        <i :class="{'icon-ok': taskItem.isDone}"></i>
+                        <span>{{taskItem.title}}</span>
+                        <i class="icon-cancel delete" @click.stop="delTask(catIndex, taskIndex)">
+                        </i>
+                    </li>
+                </ul>
+            </div>
+            <transition name="add-fade">
+                <div class="add" @click="showAddTask" v-if="isAddValid"><i class="icon-pencil"></i></div>
+            </transition>
+        </div>
+        
+
+        <!-- 右边栏 任务细节 -->
+        <div id="task-details">
+            <div class="task-infor task-title">
+                <span>任务标题：</span>
+                <input type="text" placeholder="请输入任务标题" v-if="isAddTask || isEdit" v-model="newTitle" :class="isTitleNull ? 'error': ''" @focus="clearTitle">
+                <span v-else>{{theTask.title}}</span>
+                <div class="edit-tag" v-if="!isAddTask && !isEdit && theTask.chosen">
+                    <i class="icon-ok" @click="taskDone"></i>
+                    <i class="icon-edit" @click="showEditTask"></i>
+                </div>
+            </div>
+            <div class="task-infor task-date">
+                <span>任务日期：</span>
+                <input id="datepicker" type="text" :placeholder="dateHint" v-if="isAddTask || isEdit" v-model="newDate"  :class="isDateNull ? 'error': ''" @focus="clearDate">
+                <span v-else>{{theTask.date}}</span>
+            </div>
+            <div class="task-contentwrap">
+                <textarea rows="10" placeholder="请输入任务内容" v-if="isAddTask || isEdit" v-model="newContent" :class="isContentNull ? 'error': ''" @focus="clearContent"></textarea>
+                <div class="task-content" v-else>
+                    <p>{{theTask.content}}</p>
+                </div>
+                <div class="edit-btnbar" v-if="isAddTask || isEdit">
+                    <button class="my-button edit-button" @click="editTask" >提交</button>
+                    <button class="my-button edit-button close-button" @click="hideAddTask">取消</button>
+                </div>
+        </div>
+    </div>
+
+    <!-- 弹出窗 -->
+    <div id="category-pop" v-if='show'>
+        <div class="pop-content">
+            <div class="pop-title">
+                <h3>新增分类</h3>
+            </div>
+            <form class="pop-form">
+                    <input type="text" placeholder="请填入新增分类名称" v-model="newCat" :class="isNull?  'error':''" @focus="clear"><br/>
+                    <select v-model="selCat">
+                        <option :value="0" >新增父节点分类</option>
+                        <option v-for="(category,index) in taskData.projectList" v-if="index !== 0" :value="category.id" >{{category.name}}</option>
+                    </select>
+            </form>
+            <div class="pop-btnbar">
+                <button class="my-button" type="sumbit" @click="addCate(selCat)">提交</button>
+                <button class="my-button close-button" @click="popClose">关闭</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="../js/gdt.js"></script>
+    <script src="../date/jquery-3.1.1.min.js"></script>
+    <script src="../date/jquery-ui.min.js"></script>
+    <script>
+    Vue.nextTick(function () {
+        $("#datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+            });
+    })
+    </script>
+</body>
+</html>
